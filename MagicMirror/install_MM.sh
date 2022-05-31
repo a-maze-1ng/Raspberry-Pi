@@ -38,8 +38,8 @@ sudo mv startMM /etc/cron.d/startMM #careful cron.d does not like .,_- character
 #Copy config from github
 ####################################################
 cd /home/pi
-wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/config.js
-wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/lightdm.conf
+wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/config.js #personal config for the MagicMirror
+wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/lightdm.conf #deactivate screensaver
 ####################################################
 #Backup
 ####################################################
