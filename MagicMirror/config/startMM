@@ -1,1 +1,3 @@
+# This will start the MagicMirror App on a Reboot
+# Location is /etc/cron.d
 @reboot pi /home/pi/start_mm.sh

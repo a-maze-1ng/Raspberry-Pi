@@ -51,6 +51,12 @@ sudo cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf_backup
 sudo mv /home/pi/config.js /home/pi/MagicMirror/config/config.js
 sudo mv /home/pi/lightdm.conf /etc/lightdm/lightdm.conf
 ####################################################
+#Cleanup
+####################################################
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt autoremove -y
+cd /home/pi/MagicMirror
+npm up #npm updates
+####################################################
 #Reboot
 ####################################################
 sudo reboot
