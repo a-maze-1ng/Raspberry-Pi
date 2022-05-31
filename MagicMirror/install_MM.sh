@@ -37,6 +37,25 @@ cd /home/pi
 echo "@reboot root /home/pi/start_mm.sh" > start_mm
 sudo mv start_mm /etc/cron.d/start_mm
 ####################################################
+#Copy config from github
+####################################################
+cd /home/pi
+mkdir dummy
+cd /home/pi/dummy
+wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/config.js
+####################################################
+#Backup config file
+####################################################
+sudo cp /home/pi/MagicMirror/config/config.js /home/pi/MagicMirror/config/config.js_backup
+####################################################
+#Copy config file to MagicMirror directory
+####################################################
+sudo mv /home/pi/dummy/config.js /home/pi/MagicMirror/config/config.js
+####################################################
+#Cleanup
+####################################################
+sudo rm -rf /home/pi/dummy
+####################################################
 #Reboot
 ####################################################
 sudo reboot
