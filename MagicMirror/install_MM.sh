@@ -1,5 +1,5 @@
 #!/bin/bash
-#works best with RPi 32bit image (with desktop environment!)
+#works best with Raspberry Pi OS full 32-bit (with desktop environment!)
 if [ $USER == 'root' ]; then
          echo Please login as a user to execute the MagicMirror installation, not root
          exit 1
@@ -28,7 +28,7 @@ cd /home/pi
 wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/start_mm.sh
 sudo chmod +x start_mm.sh
 ####################################################
-#Create cron job for automatic start
+#Cron job for automatic start
 ####################################################
 cd /home/pi
 wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/startMM
@@ -38,8 +38,6 @@ sudo mv startMM /etc/cron.d/startMM #careful cron.d does not like .,_- character
 #Copy config from github
 ####################################################
 cd /home/pi
-mkdir dummy
-cd /home/pi/dummy
 wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/config.js
 wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/lightdm.conf
 ####################################################
@@ -50,12 +48,8 @@ sudo cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf_backup
 ####################################################
 #Copy config files
 ####################################################
-sudo mv /home/pi/dummy/config.js /home/pi/MagicMirror/config/config.js
-sudo mv /home/pi/dummy/lightdm.conf /etc/lightdm/lightdm.conf
-####################################################
-#Cleanup
-####################################################
-sudo rm -rf /home/pi/dummy
+sudo mv /home/pi/config.js /home/pi/MagicMirror/config/config.js
+sudo mv /home/pi/lightdm.conf /etc/lightdm/lightdm.conf
 ####################################################
 #Reboot
 ####################################################
