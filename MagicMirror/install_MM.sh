@@ -40,16 +40,19 @@ sudo mv startMM /etc/cron.d/startMM #careful cron.d does not like .,_- character
 cd /home/pi
 wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/config.js #personal config for the MagicMirror
 wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/lightdm.conf #deactivate screensaver
+wget https://raw.githubusercontent.com/a-maze-1ng/Raspberry-Pi/main/MagicMirror/config/config.txt # 180° rotation (RPi 4 specific)
 ####################################################
 #Backup
 ####################################################
 sudo cp /home/pi/MagicMirror/config/config.js /home/pi/MagicMirror/config/config.js_backup
 sudo cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf_backup
+sudo cp /boot/config.txt /boot/config.txt_backup
 ####################################################
 #Copy config files
 ####################################################
 sudo mv /home/pi/config.js /home/pi/MagicMirror/config/config.js
 sudo mv /home/pi/lightdm.conf /etc/lightdm/lightdm.conf
+sudo mv /home/pi/config.txt /boot/config.txt
 ####################################################
 #Cleanup
 ####################################################
