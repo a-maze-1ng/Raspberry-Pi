@@ -28,5 +28,3 @@ network={
 * enter "PermitRootLogin yes"  
 * passwd root  
 * sudo reboot now  
-
-testes
