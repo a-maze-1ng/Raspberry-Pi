@@ -34,8 +34,9 @@ sudo chmod +x start_mm.sh
 #Create cron job for automatic start
 ####################################################
 cd /home/pi
-echo "@reboot root /home/pi/start_mm.sh" > start_mm
-sudo mv start_mm /etc/cron.d/start_mm
+echo "@reboot pi /home/pi/start_mm.sh" > startMM
+sudo chown root:root startMM
+sudo mv startMM /etc/cron.d/startMM #careful cron.d does not like .,_- characters!
 ####################################################
 #Copy config from github
 ####################################################
