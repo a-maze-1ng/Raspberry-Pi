@@ -1,6 +1,6 @@
-# Raspberry-Pi		
-## First Installation		
-### Connect to WiFi		
+# Raspberry-Pi  
+## First Installation  
+### Connect to WiFi  
 * create "wpa_supplicant.conf" in root directory  
 * enter following:  
 
@@ -28,3 +28,5 @@ network={
 * enter "PermitRootLogin yes"  
 * passwd root  
 * sudo reboot now  
+
+testes
