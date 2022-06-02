@@ -57,7 +57,7 @@ let config = {
 				calendars: [
 					{
 						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/objeq6vmm03sjldbbtagqvas6o%40group.calendar.google.com/private-e7012f2c6feb1fadda6e534fb2df844c/basic.ics"
+						url: "URL"
 					}
 						]
 			}
@@ -74,7 +74,7 @@ let config = {
 				type: "current",
 				location: "Leipzig, DE",
 				locationID: "2879139", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				apiKey: "e81194fce54b0f19047399c805ca6944",
+				apiKey: "API-KEY",
 				degreeLabel: true,
 				decimalSymbol: ","
 			}
@@ -88,7 +88,7 @@ let config = {
 				type: "forecast",
 				location: "Leipzig, DE",
 				locationID: "2879139", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				apiKey: "e81194fce54b0f19047399c805ca6944",
+				apiKey: "API-KEY",
 				degreeLabel: true,
 				decimalSymbol: ","
 			}
