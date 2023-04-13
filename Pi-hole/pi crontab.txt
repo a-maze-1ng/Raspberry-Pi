@@ -1,0 +1,2 @@
+0 3 * * 0 /home/pi/update_pihole.sh >> /home/pi/pihole_up_cronjob.log 2>&1
+0 4 * * 0 /home/pi/update_gravity.sh >> /home/pi/pihole_gravity_cronjob.log 2>&1
