@@ -1,0 +1,3 @@
+@reboot /usr/bin/python /home/pi/update_root_hints.py >> /home/pi/update_root_hints.log 2>&1
+0 0 1 */6 * /usr/bin/python /home/pi/update_root_hints.py > /home/pi/update_root_hints.log 2>&1
+@reboot /usr/local/bin/noip2 >> /dev/null 2>&1
