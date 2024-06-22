@@ -1,3 +1,10 @@
-@reboot /usr/bin/python /home/pi/update_root_hints.py >> /home/pi/update_root_hints.log 2>&1
-0 0 1 */6 * /usr/bin/python /home/pi/update_root_hints.py > /home/pi/update_root_hints.log 2>&1
-@reboot /usr/local/bin/noip2 >> /dev/null 2>&1
+#variables
+home_dir = /home/pi/scripts/
+logfile_dir = /home/pi/logfiles/
+timestamp=date +20%y_%m_%d_%H_%M_%S
+
+# update pihole system at reboot
+#@reboot python ${home_dir}update_pihole.py >> ${logfile_dir}log_update_pihole_reboot_$(${timestamp}).log 2>&1
+
+# update pihole system every 7days at 3am
+0 3 */7 * * python ${home_dir}update_pihole.py >> ${logfile_dir}log_update_pihole_7days_$(${timestamp}).log 2>&1
